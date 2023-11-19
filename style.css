@@ -1,0 +1,655 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: #F1F1F1;
+}
+
+@font-face {
+    font-family: 'Grid_regular';
+    src: url(Gridular-Regular.otf);
+}
+
+@font-face {
+    font-family: 'RM Nue';
+    src: url(RMNeue-Regular.otf);
+}
+
+@font-face {
+    font-family: 'RM MONO';
+    src: url(RMMono-Regular.otf);
+}
+
+.nav-wrapper{
+    width: 100%;
+    top: 15px;
+  padding: 5px 20px; 
+  color: white;
+  font-family: 'RM MONO';
+  mix-blend-mode: difference;
+  position: fixed;
+  z-index: 6;
+
+
+}
+.nav-container{
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+
+.nav-text-wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 10%;
+    justify-content: space-between;
+
+}
+
+.container{
+    width: 100%;/* Set the maximum width to 1400px */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+.hero-grid{
+    display: grid;
+    padding-left: 120px;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+
+h1{
+         font-size: 174px;
+         font-family: "RM Nue";
+         text-transform: uppercase;
+         font-weight: 500;
+         margin-top: 0px;
+         color: #f1f1f1;
+         margin-bottom: 0px;
+    mix-blend-mode: exclusion;
+    position: relative;
+    z-index: 2;
+         line-height: 0.8em;
+}
+
+
+
+.hero-left-wrapper{
+    width: 50%;
+    position: relative;
+    top: 20%;
+}
+
+.hero-img-wrapper{
+    position: absolute;
+    right: -30px;
+    overflow: hidden;
+    width: 55%;
+    height: 680px;
+    top: 100px;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+    right: -9%;
+
+}
+
+.load-small-p{
+    font-family: 'RM MONO';
+    line-height: 0.8;
+    margin-top: 4px;
+    position: relative;
+    top:0px
+}
+p{
+    margin-top: 0;
+}
+
+.orange-overlay{
+    background-color: #fd5530;
+    mix-blend-mode: screen;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.toggle-menu{
+    width: 100%;
+    position: fixed;
+    z-index: 6;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+.main-btn__arrow-w-white{
+    position: fixed;
+    z-index: 6;
+    border: 1px dashed white;
+    border-radius: 6.25em;
+    padding: 0.8em 1.6em;
+    display: flex;
+    top:15px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+   }
+
+.p-scramble,.p-scramble-1{
+    cursor: pointer;
+}
+
+.hero-img-block{
+    position: relative;
+    height: 100%;
+}
+.hero-img{
+ object-fit: cover;
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ 
+}
+h1 span{
+font-family: "Grid_regular";
+}
+
+.heading-center-wrapper{
+    font-size: 50px;
+    max-width: 850px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.dark-menu-wrapper {
+/*let diplay hide */
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+    background-color: #1E1E1E;
+    display: none;
+    align-items: center;
+    justify-content: start;
+    z-index: 3;
+    padding-left: 30px;
+
+}
+
+.dyn-list-wrapper{
+    margin-top: 24px;
+}
+
+.dark-menu-wrapper.open {
+
+    /*let diplay hide */
+        height: 100vh;
+        position: fixed;
+        width: 100%;
+        background-color: #1E1E1E;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        z-index: 3;
+        padding-left: 30px;
+    
+    }
+
+.menu-heading-content h2 {
+    color: #fd5530;
+    font-size: 56px;
+    font-weight: 400px;
+    font-family: "RM Nue";
+}
+
+.menu-heading-content  {
+   width: 780px;
+}
+.request-btn {
+    color: #F1F1F1;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-decoration: underline;
+    font-family: "RM";
+    cursor: pointer;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    column-gap: 20px;
+    font-family: "RM MONO";
+}
+
+.menu-heading-content .arrow{
+    padding: 0.5rem 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border:  1px dashed white;
+    border-radius: 32px;
+
+}
+.menu-list-items {
+    padding-left: 80px;
+   
+}
+.menu-link-flex {
+    display: flex;
+    text-decoration: none;
+    column-gap: 24px;
+    padding-bottom: 24px;
+}
+.menu-num {
+    color: white;
+    font-family: "RM Nue";
+    display: flex;
+    column-gap: 14px;
+    font-size: 16px;
+}
+
+
+.nav-text {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "RM MONO";
+    font-size: 26px;
+}
+
+.load-grid{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 5;
+    display: none;
+  grid-template-columns: repeat(12, 1fr); /* Creates 12 columns of equal width */
+  grid-template-rows: repeat(8, 1fr); /* Creates 8 rows of equal height */
+  gap: 0px; /* Adds a 10px gap between grid items (adjust as needed) */
+
+}
+.grid-items{
+  width: 100%;
+  height: 100%;
+  background-color: #fd5530;
+}
+
+.img-block-grid{
+    height: 100%;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    position: absolute;
+    mix-blend-mode: overlay;
+    z-index: 4;
+}
+
+.img-block-item {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0;
+}
+.img-block-item.active{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.85;
+}
+
+
+
+
+.page-content{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 6;
+    overflow: hidden;
+    
+}
+
+.content-text {
+    width: 100vw;
+    text-align: center;
+    color: white;
+}
+.counter-wrapper{
+    width: 100vw;
+    text-align: center;
+    position: relative;
+    top: 110px;
+    color: white;
+}
+
+.dyn-list-wrapper{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.load-img-item{
+
+    position: relative;
+    z-index: 5000;
+     object-fit: cover; 
+    width: 150px;
+    margin-right: 8px;
+    height: 180px;
+    
+}
+
+.page-loader-grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* Creates 12 columns of equal width */
+  grid-template-rows: repeat(8, 1fr); /* Creates 8 rows of equal height */
+  gap: 0px; 
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 5;
+
+}
+.load-grid-item{
+    width: 100%;
+    height: 100%;
+    background-color: #1E1E1E;
+}
+
+.line {
+    position: relative;
+    z-index: 1000;
+  }
+  .line-mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #f1f1f1;
+    opacity: 0.65;
+    height: 100%;
+    width: 100%;
+    z-index: 10000;
+  }
+
+ .header-width{
+        padding-top: 56px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0;
+        position: relative;
+        font-size: 15vh;
+        text-align: center;
+        color: white;
+        line-height: 0.85;
+         margin-top: 52px;
+        mix-blend-mode: exclusion;
+    }
+    
+    
+
+ .section-container{
+    display: flex;
+    column-gap: 150px;
+    margin-top: 0px;
+    padding-top: 68px;
+    justify-content: center;
+    
+}
+
+.metaverse-img-wrapper{
+   width: 50%;
+   align-content: center;
+   display: contents;
+}
+
+.text-container{
+    width: 32%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.img-wrapper{
+    width: 520px;
+    height: 520px;
+    clip-path: polygon(0 4.00em,4.00em 0,calc(100% - 4.00em) 0,100% 4.00em,100% calc(100% - 4.00em),calc(100% - 4.00em) 100%,4.00em 100%,0 calc(100% - 4.00em));
+
+    position: relative;
+    overflow: hidden;
+}
+
+.metaverse-section{
+    width: 100vw;
+    position: relative;
+    padding-bottom: 80px;
+}
+
+.metaverse-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-overlay{
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: screen;
+    background-color: #fd5530;
+
+
+}
+.text-container .text-big{
+font-size: 27px;
+margin-top: 50px;
+margin-bottom: 40px;
+font-family: 'RM Nue';
+margin-bottom: 40px;
+line-height: 1.07;
+}
+
+.small-content{
+    width: 150px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: 'RM MONO';
+    font-weight: 400;
+}
+.learn-more{
+text-decoration: none;
+display: flex;
+align-items: center;
+width: 200px;
+justify-content: space-between;
+}
+
+.learn-more-w-250{
+text-decoration: none;
+display: flex;
+align-items: center;
+width: 250px;
+justify-content: space-between;
+}
+
+.main-btn-text{
+font-size: 0.75rem;
+text-transform: uppercase;
+line-height: 1.07;
+font-family: 'RM MONO';
+text-decoration: underline;
+}
+
+.main-btn__arrow-w{
+border: 1px dashed #1e1e1e;
+border-radius: 6.25em;
+flex: none;
+justify-content: center;
+align-items: center;
+padding: 0.55rem 1.75rem;
+display: flex;
+position: relative;
+}
+
+/*        Media Quries    */
+
+
+
+@media only screen and (max-width: 600px) {
+    h1{
+        font-size: 54px;
+        font-family: "RM Nue";
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-top: 0px;
+        color: #f1f1f1;
+        margin-bottom: 0px;
+   mix-blend-mode: exclusion;
+   position: relative;
+   z-index: 2;
+        line-height: 0.8em;
+}
+.hero-grid {
+    display: grid;
+    padding-left: 20px;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.hero-img-wrapper {
+    position: absolute;
+    right: -30px;
+    overflow: hidden;
+    width: 83%;
+    height: 320px;
+    top: 100px;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+    right: 0px;
+}
+
+.hero-left-wrapper {
+    width: 50%;
+    position: relative;
+    padding-top: 83px;
+    top: 20%;
+  }
+  .section-container {
+    display: flex;
+    flex-direction: column-reverse;
+    column-gap: 151px;
+    margin-top: 0px;
+    padding-top: 68px;
+    justify-content: center;
+    row-gap: 28px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.img-wrapper {
+    width: 100%;
+    height: auto;
+    clip-path: polygon(0 4em,4em 0,calc(100% - 4em) 0,100% 4em,100% calc(100% - 4em),calc(100% - 4em) 100%,4em 100%,0 calc(100% - 4em));
+    position: relative;
+    overflow: hidden;
+}
+
+.text-container {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.text-container .text-big {
+    z-index: 2;
+    position: relative;
+    font-size: 21px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-family: 'RM Nue';
+    margin-bottom: 40px;
+    line-height: 1.07;
+}
+
+.nav-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    justify-content: space-between;
+}
+.nav-container {
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    /* padding: 0 20px; */
+    justify-content: space-between;
+}
+
+.dark-menu-wrapper.open {
+    row-gap: 24px;
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+    background-color: #1E1E1E;
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+    padding-left: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.menu-list-items {
+     padding-left: 0px;
+}
+
+.menu-heading-content {
+    width: 100%;
+}
+.load-small-p{
+    font-family: 'RM MONO';
+    line-height: 0.8;
+    margin-top: 4px;
+    position: relative;
+    top:0px
+}
+
+.dyn-list-wrapper{
+    margin-top: 24px;
+}
+.menu-heading-content h2 {
+    color: #fd5530;
+    font-size: 40px;
+    font-family: "RM Nue";
+}
+
+}
