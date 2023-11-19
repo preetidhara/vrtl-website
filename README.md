@@ -20,7 +20,7 @@ Recreation of the captivating hero and navigation animations inspired by the Aww
 
 ## Demo
 
-Check out the live demo [here](https://655a220b8c6c87429254f9c8--phenomenal-chimera-c21fa5.netlify.app/)
+Check out the live demo [here](https://vrtl-hero.netlify.app/)
 
 ## Credits
 
