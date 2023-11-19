@@ -2,9 +2,9 @@
 
 Recreation of the captivating hero and navigation animations inspired by the Awwwards-winning [VRTL World](https://www.awwwards.com/sites/vrtl-wrld) website.
 
-## Overview
+## Tech Stack
 
-Welcome to the repository for the Virtual World (VRTL) website, where I've meticulously crafted the hero and navigation animations inspired by the innovative design of the Awwwards Site of the Day winner.
+- HTML,CSS,JS and GSAP
 
 ## Features
 
@@ -15,12 +15,12 @@ Welcome to the repository for the Virtual World (VRTL) website, where I've metic
 
 ### Navigation Animation
 
-- **Interactive Navigation**: Engaging navigation animations that respond to user interactions, providing an intuitive and enjoyable browsing experience.
+- **Hover Scramble Text** Animation
 - **Block Reveal** Full Screen Overlay Menu Navigation 
 
 ## Demo
 
-Check out the live demo [here](#) (add the link to your live demo if applicable).
+Check out the live demo [here](https://655a220b8c6c87429254f9c8--phenomenal-chimera-c21fa5.netlify.app/)
 
 ## Credits
 
